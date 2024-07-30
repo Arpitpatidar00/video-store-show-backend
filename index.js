@@ -20,7 +20,7 @@ app.use(helmet());
 app.use(morgan('common'));
 
 // MongoDB connection
-const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/';
+const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://arpitpatidarappi01:Arpit%40007@cluster0.kyyhhth.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 mongoose.connect(mongoURI).catch(error => console.error('MongoDB Connection Error:', error));
 
 const conn = mongoose.connection;
