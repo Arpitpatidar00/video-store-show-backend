@@ -20,7 +20,7 @@ app.use(helmet());
 app.use(morgan('common'));
 
 // MongoDB connection
-const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/first-deploy';
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/';
 mongoose.connect(mongoURI).catch(error => console.error('MongoDB Connection Error:', error));
 
 const conn = mongoose.connection;
@@ -103,7 +103,7 @@ app.use((err, req, res, next) => {
   res.status(500).send('An internal server error occurred.');
 });
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Server started on http://localhost:${PORT}`);
 });
